@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Calculator from './components/calculator';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <Calculator firstValue={6} secondValue={5} operator={"mul"}/>
       </header>
     </div>
   );
