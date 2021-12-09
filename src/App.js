@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Calculator from './components/calculator';
-import Counter from './components/Counter';
+import Counter from './components/Counter/index';
+
+// Styles
 
 function App() {
   return (

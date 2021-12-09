@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 
+// Styles
+import "./Counter.css";
 export default function Counter() {
 	const [counter, setCounter] = useState(0);
 	const [otherCounter, setOtherCounter] = useState(0);
@@ -24,7 +26,14 @@ export default function Counter() {
 		<div>
 			<p>Counter: {counter}</p>
 			<p>Counter 2: {otherCounter}</p>
-			<button onClick={() => setCounter(counter + 1)}>Add</button>
+			<div className="container">
+				<button className="btn" onClick={() => setCounter(counter + 1)}>
+					Add
+				</button>
+				<button className="btn" onClick={() => setCounter(counter - 1)}>
+					Substract
+				</button>
+			</div>
 		</div>
 	);
 }
