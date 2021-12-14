@@ -1,44 +1,48 @@
 import React from "react";
 
-function Calculator({firstValue, secondValue, operator}){
-    if(!Number.isInteger(firstValue)){
-        return(
-            <div>
-                <spa>El primer valor no es un numero </spa>
-            </div>
-        )
-    }
+function Calculator({ firstValue, secondValue, operator }) {
+	if (!Number.isInteger(firstValue)) {
+		return (
+			<div>
+				<spa>El valor A no es un numero</spa>
+			</div>
+		);
+	}
 
-    if(!Number.isInteger(secondValue)){
-        return(
-            <div>
-                <spa>El primer valor no es un numero </spa>
-            </div>
-        )
-    }
+	if (!Number.isInteger(secondValue)) {
+		return (
+			<div>
+				<spa>El valor B no es un numero</spa>
+			</div>
+		);
+	}
 
-   let result =  firstValue + secondValue;
+	let result = 0;
+	switch (operator) {
+		case "suma":
+			result = firstValue + secondValue;
+			break;
+		case "resta":
+			result = firstValue - secondValue;
+			break;
+		case "multiplicacion":
+			result = firstValue * secondValue;
+			break;
+		default:
+			return (
+				<div>
+					<spa>El operador no es valido</spa>
+				</div>
+			);
+	}
 
-   switch(operator){
-       case "suma":
-           result = firstValue + secondValue;
-           break;
-        case "resta":
-            result = firstValue - secondValue;
-            break;
-        case "mul":
-            result = firstValue * secondValue;
-            break;
-        default:
-            result = 'Operacion no encontrada'
-
-   }
-
-    return(
-        <div>
-            <spa>El resultado es: {result} </spa>
-        </div>
-    )
+	return (
+		<div>
+			<spa>
+				El resultado de la {operator} es: {result}
+			</spa>
+		</div>
+	);
 }
 
-export default Calculator
+export default Calculator;
