@@ -1,12 +1,17 @@
 import React from "react";
 
-function UserName({ firstName, lastName }) {
+function UserName({ name, status, species, image }) {
 	return (
 		<div>
+		 	<img src={image} alt="Gir" width="200" height="300"/> 
 			<h1>
-				{firstName} {lastName}
+				{name}
 			</h1>
+			<p>
+			    {status} {species}
+			</p>
 		</div>
+		
 	);
 }
 

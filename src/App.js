@@ -11,18 +11,18 @@ function App() {
 
 	useEffect(() => {
 		const getUsers = async () => {
-			const response = await fetch("users.json");
-			console.table(response);
+			const response = await fetch("https://rickandmortyapi.com/api/character");
+			console.table(response.results);
 			const data = await response.json();
-			console.log(data);
-			setUsers(data);
+			console.log(data.results);
+			setUsers(data.results);
 		};
 
 		getUsers();
 	}, []);
 
-	const usersUI = users.map(({ id, firstName, lastName }) => (
-		<UserName key={id} firstName={firstName} lastName={lastName} />
+	const usersUI = users.map(({ id, name, status, species, image }) => (
+		<UserName key={id} name={name} status={status} species={species} image={image}   />
 	));
 
 	return (
