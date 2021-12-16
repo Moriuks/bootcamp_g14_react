@@ -3,11 +3,11 @@ import "./userStyles.css";
 
 function UserName({ name, status, species, image }) {
 	return (
-		<div class="row">
-  			<div class="column">
-			  <div class="card-img">
+		<div className="row">
+  			<div className="column">
+			  <div className="card-img">
 		 		<img src={image} alt="Gir" width="200" height="300"/> 
-				<div class="card-content">
+				<div className="card-content">
 					<h4><b>{name}</b></h4>
 					<p>{status} & {species}</p>
 				</div>
