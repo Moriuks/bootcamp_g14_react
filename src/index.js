@@ -3,9 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import { BrowserRouter, Routes, Route} from "react-router-dom"
+import Users from "./pages/Users";
 ReactDOM.render(
 	<React.StrictMode>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<App />} />
+				<Route path="/holi" element={<h1>Holi</h1>} />
+				<Route path="/users" element={<Users />} />
+			</Routes>
+		</BrowserRouter>
 		<App />
 	</React.StrictMode>,
 	document.getElementById("root")
