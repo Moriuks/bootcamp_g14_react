@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Calculator from './components/calculator';
 // this is just a test
+// NUT-51
 function App() {
   return (
     <div className="App">
