@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Just some random text
+Just some random text, trying commit
 
 In the project directory, you can run:
 
